@@ -72,15 +72,15 @@ function createGallery(images) {
     .map(
       ({ preview, original, description }) =>
         `<li class="gallery-item">
-  <a class="gallery-link" href="${original}">
-    <img
-      class="gallery-image"
-      src="${preview}"
-      data-source="${original}"
-      alt="${description}"
-    />
-  </a>
-</li>`
+          <a class="gallery-link" href="${original}">
+          <img
+          class="gallery-image"
+          src="${preview}"
+          data-source="${original}"
+          alt="${description}"
+        />
+        </a>
+      </li>`
     )
     .join("");
 }
@@ -96,8 +96,9 @@ container.addEventListener("click", (event) => {
   basicLightbox
     .create(
       `<div class="modal">
-                <img src="${largeImage}"
-           </div>`
+        <img src="${largeImage}"/>
+
+      </div>`
     )
     .show();
 });
